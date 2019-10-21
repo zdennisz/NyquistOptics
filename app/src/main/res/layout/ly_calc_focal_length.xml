@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sv_focal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_inner_focal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_parameters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/cl_fov"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_parameters_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_parameters_hfov"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_parameters"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/parameters" />
+
+                    <TextView
+                        android:id="@+id/tv_parameters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_parameters" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_parameters_hfov"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_parameters_sensor_pitch"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_parameters_title">
+
+
+                    <ImageView
+                        android:id="@+id/iv_hfov"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/hfov" />
+
+                    <TextView
+                        android:id="@+id/tv_hfov"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_hfov" />
+
+                    <EditText
+                        android:id="@+id/et_hfov"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_parameters_sensor_pitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_parameters_sensor_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_parameters_hfov">
+
+                    <ImageView
+                        android:id="@+id/iv_sensor_pitch"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/sensor_pitch" />
+
+                    <TextView
+                        android:id="@+id/tv_sensor_pitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_sensor_pitch" />
+
+                    <EditText
+                        android:id="@+id/et_sensor_pitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_parameters_sensor_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_parameters_sensor_pitch">
+
+                    <ImageView
+                        android:id="@+id/iv_sensor_size"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/sensor_size" />
+
+                    <TextView
+                        android:id="@+id/tv_sensor_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_sensor_size" />
+
+                    <EditText
+                        android:id="@+id/et_sensor_size_w"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/tv_sensor_size_x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_sensor_size_x" />
+
+                    <EditText
+                        android:id="@+id/et_sensor_size_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_fov"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/cl_nato"
+                app:layout_constraintTop_toBottomOf="@+id/cl_parameters">
+
+                <LinearLayout
+                    android:id="@+id/ll_fov_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_fov_focal_length"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_fov"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/fov" />
+
+                    <TextView
+                        android:id="@+id/tv_fov"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_fov" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fov_focal_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_fov_vfov"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_fov_title">
+
+
+                    <ImageView
+                        android:id="@+id/iv_focal_length"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/focal_length" />
+
+                    <TextView
+                        android:id="@+id/tv_focal_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_focal_length" />
+
+                    <TextView
+                        android:id="@+id/tv_focal_length_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_focal_length_output" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_fov_vfov"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_fov_ifov"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_fov_focal_length">
+
+
+                    <ImageView
+                        android:id="@+id/iv_vfov"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/vfov" />
+
+                    <TextView
+                        android:id="@+id/tv_vfov"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_vfov" />
+
+                    <TextView
+                        android:id="@+id/tv_vfov_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_vfov_output" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fov_ifov"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_fov_vfov">
+
+
+                    <ImageView
+                        android:id="@+id/iv_ifov"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ifov" />
+
+                    <TextView
+                        android:id="@+id/tv_ifov"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_ifov" />
+
+                    <TextView
+                        android:id="@+id/tv_ifov_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_ifov_output" />
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_nato"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/cl_human"
+                app:layout_constraintTop_toBottomOf="@+id/cl_fov">
+
+                <LinearLayout
+                    android:id="@+id/ll_nato_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_nato_detection"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_nato"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/nato" />
+
+                    <TextView
+                        android:id="@+id/tv_nato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_nato" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_nato_detection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_nato_recognition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_nato_title">
+
+
+                    <ImageView
+                        android:id="@+id/iv_nato_detection"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/nato_detection" />
+
+                    <TextView
+                        android:id="@+id/tv_nato_detection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_nato_detection" />
+
+                    <TextView
+                        android:id="@+id/tv_nato_detection_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_nato_detection_output" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_nato_recognition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_nato_identification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_nato_detection">
+
+
+                    <ImageView
+                        android:id="@+id/iv_nato_recognition"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/nato_recognition" />
+
+                    <TextView
+                        android:id="@+id/tv_nato_recognition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_nato_recognition" />
+
+                    <TextView
+                        android:id="@+id/tv_nato_recognition_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_nato_recognition_output" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_nato_identification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_nato_recognition">
+
+
+                    <ImageView
+                        android:id="@+id/iv_nato_identification"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/nato_identification" />
+
+                    <TextView
+                        android:id="@+id/tv_nato_identification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_nato_identification" />
+
+                    <TextView
+                        android:id="@+id/tv_nato_identification_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_nato_identification_output" />
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_human"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/cl_object"
+                app:layout_constraintTop_toBottomOf="@+id/cl_nato">
+
+                <LinearLayout
+                    android:id="@+id/ll_human_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_human_detection"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_human"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/human" />
+
+                    <TextView
+                        android:id="@+id/tv_human"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_human" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_human_detection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_human_recognition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_human_title">
+
+
+                    <ImageView
+                        android:id="@+id/iv_human_detection"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/human_detection" />
+
+                    <TextView
+                        android:id="@+id/tv_human_detection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_human_detection" />
+
+                    <TextView
+                        android:id="@+id/tv_human_detection_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_human_detection_output" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_human_recognition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_human_identification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_human_detection">
+
+
+                    <ImageView
+                        android:id="@+id/iv_human_recognition"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/human_recognition" />
+
+                    <TextView
+                        android:id="@+id/tv_human_recognition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_human_recognition" />
+
+                    <TextView
+                        android:id="@+id/tv_human_recognition_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_human_recognition_output" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_human_identification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_human_recognition">
+
+
+                    <ImageView
+                        android:id="@+id/iv_human_identification"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/human_identification" />
+
+                    <TextView
+                        android:id="@+id/tv_human_identification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_human_identification" />
+
+                    <TextView
+                        android:id="@+id/tv_human_identification_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_human_identification_output" />
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_object"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/cl_parameters"
+                app:layout_constraintTop_toBottomOf="@+id/cl_human">
+
+                <LinearLayout
+                    android:id="@+id/ll_object_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_object_detection"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_object"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/object" />
+
+                    <TextView
+                        android:id="@+id/tv_object"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_object" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_object_detection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_object_recognition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_object_title">
+
+
+                    <ImageView
+                        android:id="@+id/iv_object_detection"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/object_detection" />
+
+                    <TextView
+                        android:id="@+id/tv_object_detection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_object_detection" />
+
+                    <TextView
+                        android:id="@+id/tv_object_detection_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_object_detection_output" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_object_recognition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_object_detection">
+
+
+                    <ImageView
+                        android:id="@+id/iv_object_recognition"
+                        android:layout_width="48px"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/object_recognition" />
+
+                    <TextView
+                        android:id="@+id/tv_object_recognition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_object_recognition" />
+
+                    <TextView
+                        android:id="@+id/tv_object_recognition_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tv_object_recognition_output" />
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
