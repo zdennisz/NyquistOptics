@@ -92,7 +92,7 @@
                         android:layout_height="48dp"
                         android:layout_margin="4dp"
                         android:background="@drawable/drw_fill_blue_grad_border_black"
-                        android:padding="4dp"
+                        android:padding="8dp"
                         app:srcCompat="@drawable/focal_length" />
 
 
@@ -115,10 +115,11 @@
                         android:width="65dp"
                         android:ems="10"
                         android:gravity="start"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:textAlignment="viewStart"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
+
                 </LinearLayout>
 
 
@@ -143,7 +144,7 @@
                         android:layout_height="48dp"
                         android:layout_margin="4dp"
                         android:background="@drawable/drw_fill_blue_grad_border_black"
-                        android:padding="4dp"
+                        android:padding="8dp"
                         app:srcCompat="@drawable/hfov" />
 
 
@@ -166,7 +167,7 @@
                         android:width="65dp"
                         android:ems="10"
                         android:gravity="start"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:textAlignment="viewStart"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
@@ -240,11 +241,10 @@
                     <ImageView
                         android:id="@+id/iv_sensor_size_input"
                         android:layout_width="48dp"
-
                         android:layout_height="48dp"
                         android:layout_margin="4dp"
                         android:background="@drawable/drw_fill_blue_grad_border_black"
-                        android:padding="8dp"
+                        android:padding="12dp"
                         app:srcCompat="@drawable/sensor_size" />
 
                     <TextView

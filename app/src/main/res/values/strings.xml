@@ -42,7 +42,6 @@
     <string name="tv_humanSize"></string>
     <string name="tv_objSize"></string>
 
-    <string name="action_settings">Settings</string>
 
     <string name="tv_lp">Line Pairs</string>
     <string name="tv_lpDetObj">Line pairs for detection (object)</string>
@@ -70,4 +69,57 @@
     <string name="tv_objTargetSizeX">x</string>
 
 
-</resources>
+
+
+
+
+
+    <string name="tv_parameters">Input Parameters</string>
+    <string name="tv_hfov">HFOV:</string>
+    <string name="tv_sensor_pitch">Sensor Pitch:</string>
+    <string name="tv_sensor_size">Size:</string>
+    <string name="width">Width</string>
+    <string name="width_default">640</string>
+
+    <string name="tv_sensor_size_x">x</string>
+    <string name="height">Height</string>
+    <string name="height_default">480</string>
+
+
+    <string name="tv_fov">Field of View (FOV)</string>
+    <string name="tv_focal_length">Focal Length:</string>
+    <string name="tv_focal_length_output">12345</string>
+    <string name="tv_vfov">VFOV:</string>
+    <string name="tv_vfov_output">12345</string>
+    <string name="tv_ifov">IFOV:</string>
+    <string name="tv_ifov_output">12345</string>
+    <string name="tv_nato">Nato Target</string>
+    <string name="tv_nato_size">(0.0x0.0)</string>
+    <string name="tv_nato_detection">Detection:</string>
+    <string name="tv_nato_detection_output">12345</string>
+    <string name="tv_nato_recognition">Recognition:</string>
+    <string name="tv_nato_recognition_output">12345</string>
+    <string name="tv_nato_identification">Identification:</string>
+    <string name="tv_nato_identification_output">12345</string>
+    <string name="tv_human">Human Target</string>
+    <string name="tv_human_size">(0.0x0.0)</string>
+    <string name="tv_human_detection">Detection:</string>
+    <string name="tv_human_detection_output">12345</string>
+    <string name="tv_human_recognition">Recognition:</string>
+    <string name="tv_human_recognition_output">12345</string>
+    <string name="tv_human_identification">Identification:</string>
+    <string name="tv_human_identification_output">12345</string>
+    <string name="tv_object">Object Target</string>
+    <string name="tv_object_size">(0.0x0.0)</string>
+    <string name="tv_object_detection">Detection:</string>
+    <string name="tv_object_detection_output">12345</string>
+    <string name="tv_object_recognition">Recognition:</string>
+    <string name="tv_object_recognition_output">12345</string>
+    <string name="tv_hfov_output">12345</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_input_focal_output_hfov">Calculate HFOV and DRI</string>
+    <string name="action_input_hfov_output_focal">Calculate Focal Length and DRI</string>
+    <string name="action_user_properties">Properties</string>
+
+
+    </resources>
